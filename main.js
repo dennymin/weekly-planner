@@ -45,3 +45,17 @@ function handleSubmit(event) {
   data.entries.push(newObjectEntry);
   toggleModal();
 }
+
+var $weekDayEntries = document.querySelector('.entry-days');
+var $weekDayButton = document.querySelectorAll('button[day]');
+var $tableDay = document.querySelectorAll('.table-day');
+$weekDayEntries.addEventListener('click', daySelect);
+function daySelect(event) {
+  event.preventDefault();
+  for (var daysInAWeek = 0; daysInAWeek < $weekDayButton.length; daysInAWeek++) {
+    if ($weekDayButton[daysInAWeek].getAttribute('day') === event.target.getAttribute('day')) {
+      // $tableDay.textContent = 'Schedule Events For' + event.target.getAttribute('day');
+      $tableDay.textContent.value = 'hi';
+    }
+  }
+}
