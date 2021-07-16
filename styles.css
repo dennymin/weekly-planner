@@ -81,3 +81,7 @@ textarea {
 .float-right {
   float: right;
 }
+
+.hidden {
+  display: none;
+}

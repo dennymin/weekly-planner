@@ -14,12 +14,12 @@
     <div class="row centered">
       <button class="entry-button button">Add Entry</button>
     </div>
-    <div class="row centered tint position-fixed true-center">
+    <div class="modal-window row centered tint position-fixed true-center hidden">
       <form>
         <fieldset>
           <h2 class="text-align-center">Add Entry</h2>
           <div class="options">
-            <select>
+            <select name="day">
               <option>Day of Week</option>
               <option>Sunday</option>
               <option>Monday</option>
@@ -29,20 +29,21 @@
               <option>Friday</option>
               <option>Saturday</option>
             </select>
-            <select>
+            <select name="time">
               <option>Time</option>
             </select>
           </div>
           <div class="justify-center">
-          <textarea placeholder="Description"></textarea>
+          <textarea name="task" placeholder="Description"></textarea>
           </div>
           <div>
-            <button class="float-right">Submit</button>
+            <button class="submit-button float-right">Submit</button>
           </div>
         </fieldset>
       </form>
     </div>
   </div>
   <script src="main.js"></script>
+  <script src="data.js"></script>
 </body>
 </html>
