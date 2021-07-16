@@ -4,8 +4,16 @@ var data = {
   nextEntryId: 1,
   view: 'entry-form'
 };
-
 var previousDataJSON = localStorage.getItem('week-planner-local-storage');
+var $entryButton = document.querySelector('.entry-button');
+var $modal = document.querySelector('.modal-window');
+var $submitButton = document.querySelector('.submit-button');
+var $entryFormElements = document.forms[0];
+
+window.addEventListener('beforeunload', storeData);
+$entryButton.addEventListener('click', toggleModal);
+$submitButton.addEventListener('click', handleSubmit);
+
 if (previousDataJSON !== null) {
   data = JSON.parse(previousDataJSON);
 }
@@ -15,17 +23,10 @@ function storeData(event) {
   localStorage.setItem('week-planner-local-storage', dataJSON);
 }
 
-window.addEventListener('beforeunload', storeData);
-
-var $entryButton = document.querySelector('.entry-button');
-var $modal = document.querySelector('.modal-window');
 function toggleModal(event) {
   $modal.classList.toggle('hidden');
 }
-$entryButton.addEventListener('click', toggleModal);
 
-var $submitButton = document.querySelector('.submit-button');
-var $entryFormElements = document.forms[0];
 function handleSubmit(event) {
   event.preventDefault();
   var newObjectEntry = {};
@@ -37,4 +38,3 @@ function handleSubmit(event) {
   data.entries.push(newObjectEntry);
   toggleModal();
 }
-$submitButton.addEventListener('click', handleSubmit);
