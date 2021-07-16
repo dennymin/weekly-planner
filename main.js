@@ -1,8 +1,15 @@
 var data = {
-  entries: [],
+  day: {
+    sunday: [],
+    monday: [],
+    tuesday: [],
+    wednesday: [],
+    thursday: [],
+    friday: [],
+    saturday: []
+  },
   editing: null,
-  nextEntryId: 1,
-  view: 'entry-form'
+  nextEntryId: 1
 };
 var previousDataJSON = localStorage.getItem('week-planner-local-storage');
 var $entryButton = document.querySelector('.entry-button');

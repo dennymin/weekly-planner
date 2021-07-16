@@ -4,11 +4,17 @@
 
 table {
   border: 1px solid black;
+  border-collapse: collapse;
+  width: 90%;
 }
 
 td:nth-child(odd),
 th {
   border-right: 1px solid black;
+}
+
+tr {
+  height: 1.5rem;
 }
 
 thead > tr {
@@ -17,11 +23,6 @@ thead > tr {
 
 tbody > tr:nth-child(odd) {
   background-color: lightblue;
-}
-
-table {
-  border-collapse: collapse;
-  width: 90%;
 }
 
 fieldset {
