@@ -2,15 +2,21 @@
   font-family: monospace;
 }
 
-table,
-th,
-td {
+table {
   border: 1px solid black;
 }
 
-tr:nth-child(odd) {
-  /* background-color: #eee; */
-  background-color: blue;
+td:nth-child(odd),
+th {
+  border-right: 1px solid black;
+}
+
+thead > tr {
+  background-color: gray;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: lightblue;
 }
 
 table {
