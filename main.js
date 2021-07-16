@@ -1,15 +1,14 @@
 var data = {
   day: {
-    sunday: [],
-    monday: [],
-    tuesday: [],
-    wednesday: [],
-    thursday: [],
-    friday: [],
-    saturday: []
+    Sunday: [],
+    Monday: [],
+    Tuesday: [],
+    Wednesday: [],
+    Thursday: [],
+    Friday: [],
+    Saturday: []
   },
-  editing: null,
-  nextEntryId: 1
+  editing: null
 };
 var previousDataJSON = localStorage.getItem('week-planner-local-storage');
 var $entryButton = document.querySelector('.entry-button');
@@ -37,25 +36,21 @@ function toggleModal(event) {
 function handleSubmit(event) {
   event.preventDefault();
   var newObjectEntry = {};
-  newObjectEntry.day = $entryFormElements.elements.day.value;
   newObjectEntry.time = $entryFormElements.elements.time.value;
   newObjectEntry.task = $entryFormElements.elements.task.value;
-  newObjectEntry.entryId = data.nextEntryId;
-  data.nextEntryId++;
-  data.entries.push(newObjectEntry);
+  var optionDay = $entryFormElements.elements.day.value;
+  data.day..push(newObjectEntry);
   toggleModal();
 }
 
 var $weekDayEntries = document.querySelector('.entry-days');
 var $weekDayButton = document.querySelectorAll('button[day]');
-var $tableDay = document.querySelectorAll('.table-day');
+var $tableDay = document.querySelector('.table-day');
 $weekDayEntries.addEventListener('click', daySelect);
 function daySelect(event) {
-  event.preventDefault();
   for (var daysInAWeek = 0; daysInAWeek < $weekDayButton.length; daysInAWeek++) {
     if ($weekDayButton[daysInAWeek].getAttribute('day') === event.target.getAttribute('day')) {
-      // $tableDay.textContent = 'Schedule Events For' + event.target.getAttribute('day');
-      $tableDay.textContent.value = 'hi';
+      $tableDay.textContent = 'Schedule Events For ' + event.target.getAttribute('day');
     }
   }
 }
