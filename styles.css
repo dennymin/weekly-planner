@@ -2,6 +2,17 @@
   font-family: monospace;
 }
 
+form {
+  background-color: white;
+  height: 250px;
+  width: 500px;
+}
+
+div.position-fixed {
+  height: 100vh;
+  width: 100vw;
+}
+
 .container {
   width: 1000px;
   margin: 0 auto;
@@ -9,10 +20,11 @@
 
 .row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .column-full {
-  width: 100%;
+  flex-basis: 100%;
 }
 
 .centered {
@@ -26,4 +38,23 @@
 
 .entry-button {
   background-color: aliceblue;
+}
+
+.tint {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.position-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.true-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.text-align-center {
+  text-align: center;
 }
