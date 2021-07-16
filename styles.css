@@ -57,8 +57,7 @@ textarea {
 
 .entry-button {
   background-color: aliceblue;
-  position: absolute;
-  top: 250px;
+  margin-top: 10px;
 }
 
 .tint {
@@ -97,6 +96,6 @@ textarea {
   height: 10rem;
 }
 
-.position-relative {
-  position: relative;
+table {
+  border: 1px solid black;
 }
