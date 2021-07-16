@@ -2,6 +2,22 @@
   font-family: monospace;
 }
 
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+tr:nth-child(odd) {
+  /* background-color: #eee; */
+  background-color: blue;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+}
+
 fieldset {
   background-color: white;
   border-radius: 5px;
@@ -57,7 +73,7 @@ textarea {
 
 .entry-button {
   background-color: aliceblue;
-  margin-top: 10px;
+  margin: 10px auto;
 }
 
 .tint {
@@ -96,6 +112,10 @@ textarea {
   height: 10rem;
 }
 
-table {
-  border: 1px solid black;
+.margin-auto {
+  margin: auto;
+}
+
+.text-align-left {
+  text-align: left;
 }
