@@ -1,0 +1,29 @@
+* {
+  font-family: monospace;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.centered {
+  justify-content: center;
+}
+
+.button {
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.entry-button {
+  background-color: aliceblue;
+}
