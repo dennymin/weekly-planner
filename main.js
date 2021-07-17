@@ -18,7 +18,7 @@ var $entryFormElements = document.forms[0];
 var $weekDayEntries = document.querySelector('.entry-days');
 var $weekDayButton = document.querySelectorAll('button[day]');
 var $tableDay = document.querySelector('.table-day');
-// var $table = document.querySelector('table');
+var $table = document.querySelector('table');
 
 window.addEventListener('beforeunload', storeData);
 $entryButton.addEventListener('click', toggleModal);
