@@ -55,3 +55,13 @@ function daySelect(event) {
     }
   }
 }
+
+function organizeEntriesOldestToYoungest(date) {
+  var organizedData = [];
+  var oldestEntry = 0;
+  for (var dayEntryIndex = 0; dayEntryIndex < date.length; dayEntryIndex++) {
+    if (data.day[date][dayEntryIndex] > oldestEntry) {
+
+    }
+  }
+}
